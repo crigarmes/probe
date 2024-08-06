@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: report-mock
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: report-mock
+  template:
+    metadata:
+      labels:
+        app: report-mock
+    spec:
+      containers:
+      - image: 15.188.204.159:5000/glera/report-mock:latest
+        name: report-mock
+        ports:
+        - containerPort: 8080
