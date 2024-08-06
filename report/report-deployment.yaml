@@ -13,7 +13,7 @@ spec:
         app: report-mock
     spec:
       containers:
-      - image: glera.duckdns.org:5000/glera/report-mock:latest
+      - image: 15.188.204.159:5000/glera/report-mock:latest
         name: report-mock
         ports:
         - containerPort: 8080
